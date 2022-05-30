@@ -37,6 +37,7 @@ namespace Twitter_clone_backend.Migrations
                     Text = table.Column<string>(type: "nvarchar(280)", maxLength: 280, nullable: false),
                     Image = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Likes = table.Column<int>(type: "int", nullable: false),
+                    IsLiked = table.Column<bool>(type: "bit", nullable: true),
                     Retweets = table.Column<int>(type: "int", nullable: false),
                     PostedTime = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UserId = table.Column<int>(type: "int", nullable: false),
@@ -70,13 +71,13 @@ namespace Twitter_clone_backend.Migrations
 
             migrationBuilder.InsertData(
                 table: "Tweets",
-                columns: new[] { "Id", "Image", "Likes", "PostedTime", "Retweets", "Text", "TweetId", "UserId" },
+                columns: new[] { "Id", "Image", "IsLiked", "Likes", "PostedTime", "Retweets", "Text", "TweetId", "UserId" },
                 values: new object[,]
                 {
-                    { 1, "https://pbs.twimg.com/media/FTXvYNSXoAAqJ8Q.jpg:large", 12700, new DateTime(2022, 5, 29, 11, 58, 25, 743, DateTimeKind.Local).AddTicks(295), 2082, "The points scorers in Barcelona", null, 1 },
-                    { 2, "https://pbs.twimg.com/media/FTXunk6XoAIeBwQ?format=jpg&name=small", 13200, new DateTime(2022, 5, 29, 11, 58, 25, 743, DateTimeKind.Local).AddTicks(304), 2342, "We have a NEW Championship leader!", null, 1 },
-                    { 6, "https://pbs.twimg.com/media/FTiiuh4XEAEtRQr?format=jpg&name=small", 1012, new DateTime(2022, 5, 29, 11, 58, 25, 743, DateTimeKind.Local).AddTicks(319), 162, "After the 'Teletubies' show ended, the landowner removed the hill used as the set and flooded the field due to the number of fans trespassing to see Teletubbieland", null, 2 },
-                    { 7, null, 1862, new DateTime(2022, 5, 29, 11, 58, 25, 743, DateTimeKind.Local).AddTicks(325), 211, "In a bar, turning up the music can cause customers to talk less, resulting in them drinking more", null, 2 }
+                    { 1, "https://pbs.twimg.com/media/FTXvYNSXoAAqJ8Q.jpg:large", false, 12700, new DateTime(2022, 5, 30, 22, 40, 31, 385, DateTimeKind.Local).AddTicks(2065), 2082, "The points scorers in Barcelona", null, 1 },
+                    { 2, "https://pbs.twimg.com/media/FTXunk6XoAIeBwQ?format=jpg&name=small", false, 13200, new DateTime(2022, 5, 30, 22, 40, 31, 385, DateTimeKind.Local).AddTicks(2076), 2342, "We have a NEW Championship leader!", null, 1 },
+                    { 6, "https://pbs.twimg.com/media/FTiiuh4XEAEtRQr?format=jpg&name=small", false, 1012, new DateTime(2022, 5, 30, 22, 40, 31, 385, DateTimeKind.Local).AddTicks(2090), 162, "After the 'Teletubies' show ended, the landowner removed the hill used as the set and flooded the field due to the number of fans trespassing to see Teletubbieland", null, 2 },
+                    { 7, null, false, 1862, new DateTime(2022, 5, 30, 22, 40, 31, 385, DateTimeKind.Local).AddTicks(2096), 211, "In a bar, turning up the music can cause customers to talk less, resulting in them drinking more", null, 2 }
                 });
 
             migrationBuilder.CreateIndex(

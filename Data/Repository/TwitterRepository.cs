@@ -136,6 +136,7 @@ namespace Twitter_clone_backend.Data.Repository
                 tweetToAdd.Retweets = t.Retweets;
                 tweetToAdd.Replies = t.Replies;
                 tweetToAdd.Likes = t.Likes;
+                tweetToAdd.IsLiked = t.IsLiked;
                 tweetToAdd.PostedTime = t.PostedTime;
 
                 listToReturn.Add(tweetToAdd);
@@ -158,6 +159,7 @@ namespace Twitter_clone_backend.Data.Repository
             tweetToReturn.Text = t.Text;
             tweetToReturn.Image = t.Image;
             tweetToReturn.Likes = t.Likes;
+            tweetToReturn.IsLiked = t.IsLiked;
             tweetToReturn.Retweets = t.Retweets;
             tweetToReturn.PostedTime = t.PostedTime;
             tweetToReturn.Replies = t.Replies;
@@ -199,6 +201,7 @@ namespace Twitter_clone_backend.Data.Repository
                 //tweetToUpdate.Text = tweet.Text;
                 //tweetToUpdate.Image = tweet.Image;
                 tweetToUpdate.Likes = tweet.Likes;
+                tweetToUpdate.IsLiked = tweet.IsLiked;
                 //tweetToUpdate.Retweets = tweet.Retweets;
                 //tweetToUpdate.PostedTime = tweet.PostedTime;
 

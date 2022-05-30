@@ -33,6 +33,9 @@ namespace Twitter_clone_backend.Migrations
                     b.Property<string>("Image")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool?>("IsLiked")
+                        .HasColumnType("bit");
+
                     b.Property<int>("Likes")
                         .HasColumnType("int");
 
@@ -66,8 +69,9 @@ namespace Twitter_clone_backend.Migrations
                         {
                             Id = 1,
                             Image = "https://pbs.twimg.com/media/FTXvYNSXoAAqJ8Q.jpg:large",
+                            IsLiked = false,
                             Likes = 12700,
-                            PostedTime = new DateTime(2022, 5, 29, 11, 58, 25, 743, DateTimeKind.Local).AddTicks(295),
+                            PostedTime = new DateTime(2022, 5, 30, 22, 40, 31, 385, DateTimeKind.Local).AddTicks(2065),
                             Retweets = 2082,
                             Text = "The points scorers in Barcelona",
                             UserId = 1
@@ -76,8 +80,9 @@ namespace Twitter_clone_backend.Migrations
                         {
                             Id = 2,
                             Image = "https://pbs.twimg.com/media/FTXunk6XoAIeBwQ?format=jpg&name=small",
+                            IsLiked = false,
                             Likes = 13200,
-                            PostedTime = new DateTime(2022, 5, 29, 11, 58, 25, 743, DateTimeKind.Local).AddTicks(304),
+                            PostedTime = new DateTime(2022, 5, 30, 22, 40, 31, 385, DateTimeKind.Local).AddTicks(2076),
                             Retweets = 2342,
                             Text = "We have a NEW Championship leader!",
                             UserId = 1
@@ -86,8 +91,9 @@ namespace Twitter_clone_backend.Migrations
                         {
                             Id = 6,
                             Image = "https://pbs.twimg.com/media/FTiiuh4XEAEtRQr?format=jpg&name=small",
+                            IsLiked = false,
                             Likes = 1012,
-                            PostedTime = new DateTime(2022, 5, 29, 11, 58, 25, 743, DateTimeKind.Local).AddTicks(319),
+                            PostedTime = new DateTime(2022, 5, 30, 22, 40, 31, 385, DateTimeKind.Local).AddTicks(2090),
                             Retweets = 162,
                             Text = "After the 'Teletubies' show ended, the landowner removed the hill used as the set and flooded the field due to the number of fans trespassing to see Teletubbieland",
                             UserId = 2
@@ -95,8 +101,9 @@ namespace Twitter_clone_backend.Migrations
                         new
                         {
                             Id = 7,
+                            IsLiked = false,
                             Likes = 1862,
-                            PostedTime = new DateTime(2022, 5, 29, 11, 58, 25, 743, DateTimeKind.Local).AddTicks(325),
+                            PostedTime = new DateTime(2022, 5, 30, 22, 40, 31, 385, DateTimeKind.Local).AddTicks(2096),
                             Retweets = 211,
                             Text = "In a bar, turning up the music can cause customers to talk less, resulting in them drinking more",
                             UserId = 2
